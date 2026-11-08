@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>شيف الثلاجة</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>🥗 شيف الثلاجة</h1>
+    <p class="sub">صوّر محتويات ثلاجتك وسأقترح عليك ما تطبخه: فطور أو غداء أو عشاء.</p>
+
+    <div class="btns">
+      <label class="btn primary" for="cam">📷 صوّر الثلاجة</label>
+      <label class="btn" for="gal">🖼️ من المعرض</label>
+    </div>
+    <input id="cam" type="file" accept="image/*" capture="environment">
+    <input id="gal" type="file" accept="image/*">
+
+    <input id="note" type="text" placeholder="ملاحظات (اختياري): نباتي، بدون حليب، وقت قصير...">
+    <img id="preview" alt="صورة الثلاجة">
+    <div id="status"></div>
+
+    <section id="result" hidden>
+      <h2>ما وجدته في الثلاجة</h2>
+      <div class="chips" id="found"></div>
+      <div class="tabs" role="tablist" id="tabs"></div>
+      <div id="meals"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
